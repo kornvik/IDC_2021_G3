@@ -87,7 +87,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 462712006165823394, guid: 11bbce01ff6d2c64b8960a3032aea72d, type: 3}
       propertyPath: sceneViewId
-      value: 21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1054176873395577384, guid: 11bbce01ff6d2c64b8960a3032aea72d, type: 3}
       propertyPath: m_IsActive
@@ -95,7 +95,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1115736176647246709, guid: 11bbce01ff6d2c64b8960a3032aea72d, type: 3}
       propertyPath: sceneViewId
-      value: 19
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1660281919833215602, guid: 11bbce01ff6d2c64b8960a3032aea72d, type: 3}
       propertyPath: m_ForwardFriction.m_Stiffness
@@ -111,7 +111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2467782804552321850, guid: 11bbce01ff6d2c64b8960a3032aea72d, type: 3}
       propertyPath: sceneViewId
-      value: 22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2812210350768272402, guid: 11bbce01ff6d2c64b8960a3032aea72d, type: 3}
       propertyPath: m_RootOrder
@@ -175,11 +175,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261371513943785507, guid: 11bbce01ff6d2c64b8960a3032aea72d, type: 3}
       propertyPath: sceneViewId
-      value: 18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6333188376760521920, guid: 11bbce01ff6d2c64b8960a3032aea72d, type: 3}
       propertyPath: sceneViewId
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bbce01ff6d2c64b8960a3032aea72d, type: 3}

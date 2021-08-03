@@ -125,7 +125,7 @@ public class MultiPlay2 : MonoBehaviourPunCallbacks
         orientation = new Vector3(0.0f, 90.0f, 0.0f);
         PhotonNetwork.Instantiate(RobotnameR1.text, position, Quaternion.Euler(orientation));
         position.y = position.y + 3.0f;
-        PhotonNetwork.Instantiate("Flyer2", position, Quaternion.Euler(orientation));
+        // PhotonNetwork.Instantiate("Flyer2", position, Quaternion.Euler(orientation));
 
     }
 
@@ -138,7 +138,7 @@ public class MultiPlay2 : MonoBehaviourPunCallbacks
         orientation = new Vector3(0.0f, -90.0f, 0.0f); PhotonNetwork.Instantiate(RobotnameB1.text, position, Quaternion.Euler(orientation));
         position.y = position.y + 3.0f;
         position.z = position.z + 6.0f;
-        PhotonNetwork.Instantiate("Flyer2", position, Quaternion.identity);
+        // PhotonNetwork.Instantiate("Flyer2", position, Quaternion.identity);
     }
 }
 
