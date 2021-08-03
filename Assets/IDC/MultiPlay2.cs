@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 // MonoBehaviourPunCallbacksを継承して、PUNのコールバックを受け取れるようにする
 
-public class MultiPlay2 : MonoBehaviourPunCallbacks
+public class MultiPlay2_org : MonoBehaviourPunCallbacks
 {
     public Text RobotnameR1, RobotnameB1;
     int Playstart = 0;
@@ -95,25 +95,24 @@ public class MultiPlay2 : MonoBehaviourPunCallbacks
 
         }
 
-        var position = new Vector3(0.0f, 0.0f, 0.0f);
-        var orientation = new Vector3(0.0f, 0.0f, 0.0f);
-        //PhotonNetwork.Instantiate("Cart1d", position, Quaternion.identity);
-        //ランダムな座標に自身のアバター（ネットワークオブジェクト）を生成する
+        // var position = new Vector3(0.0f, 0.0f, 0.0f);
+        // var orientation = new Vector3(0.0f, 0.0f, 0.0f);
+        //PhotonNetwork.Instantiate("Objects", position, Quaternion.identity);
+        // ランダムな座標に自身のアバター（ネットワークオブジェクト）を生成する
         //position =  new Vector3(-19.3f + 3.0f*(photonView.OwnerActorNr-1), 3.13f, 18f);
-        // if (PlayerCount == 2)
+        // if (PlayerCount == 2 )
         // {
-        //     position = new Vector3(-4.11f - 18.0f, 2.4f, 0.0f + 4.0f);
+        //     position = new Vector3(-4.11f-18.0f, 2.4f, 0.0f+4.0f);
         //     orientation = new Vector3(0.0f, -90.0f, 0.0f);
-        //     PhotonNetwork.Instantiate("Cart1d", position, Quaternion.Euler(orientation));
-        //     position.y = position.y + 3.0f;
-        //     position.z = position.z + 6.0f;
-        //     PhotonNetwork.Instantiate("Flyer2", position, Quaternion.identity);
+        // PhotonNetwork.Instantiate(Robotname.text, position, Quaternion.Euler(orientation));
+        // position.y = position.y + 3.0f;
+        // position.z = position.z + 6.0f;
+        // PhotonNetwork.Instantiate("Flyer2", position, Quaternion.identity);
         // }
-        // else
-        // {
-        //     position = new Vector3(4.11f + 18.0f, 2.4f, 0.0f + 12.0f);
+        // else {
+        //     position = new Vector3(4.11f+18.0f, 2.4f, 0.0f+12.0f);
         //     orientation = new Vector3(0.0f, 90.0f, 0.0f);
-        //     PhotonNetwork.Instantiate("Cart1d", position, Quaternion.Euler(orientation));
+        //     PhotonNetwork.Instantiate("Cart1", position, Quaternion.Euler(orientation));
         //     position.y = position.y + 3.0f;
         //     PhotonNetwork.Instantiate("Flyer2", position, Quaternion.Euler(orientation));
         // }
@@ -122,7 +121,7 @@ public class MultiPlay2 : MonoBehaviourPunCallbacks
     public void StartRobotR1()
     {
 
-        position = new Vector3(10.3f, 2.4f, 4.3f);
+        position = new Vector3(4.11f + 18.0f, 2.4f, 0.0f + 12.0f);
         orientation = new Vector3(0.0f, 90.0f, 0.0f);
         PhotonNetwork.Instantiate(RobotnameR1.text, position, Quaternion.Euler(orientation));
         position.y = position.y + 3.0f;
@@ -132,10 +131,11 @@ public class MultiPlay2 : MonoBehaviourPunCallbacks
 
     public void StartRobotB1()
     {
-        position = new Vector3(-10.3f, 2.4f, -3.7f);
-        orientation = new Vector3(0.0f, -90.0f, 0.0f);
-        
-        PhotonNetwork.Instantiate(RobotnameB1.text, position, Quaternion.Euler(orientation));
+        var position = new Vector3(0.0f, 0.0f, 0.0f);
+        var orientation = new Vector3(0.0f, 0.0f, 0.0f);
+
+        position = new Vector3(-4.11f - 18.0f, 2.4f, 0.0f + 4.0f);
+        orientation = new Vector3(0.0f, -90.0f, 0.0f); PhotonNetwork.Instantiate(RobotnameB1.text, position, Quaternion.Euler(orientation));
         position.y = position.y + 3.0f;
         position.z = position.z + 6.0f;
         PhotonNetwork.Instantiate("Flyer2", position, Quaternion.identity);

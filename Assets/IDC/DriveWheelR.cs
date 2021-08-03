@@ -66,13 +66,12 @@ public class DriveWheelR : MonoBehaviour
 
         if (photonView.IsMine)
         {
-            
+
             foreach (AxleInfoDR axleInfo in axleInfos)
             {
-                axleInfo.Wheel.motorTorque = 0.0f;
                 if (axleInfo.motor)
                 {
-                    
+                    axleInfo.Wheel.motorTorque = 0.0f;
                     ///axleInfo.Wheel.motorTorque = (power+stickR.x)*maxMotorTorque*stickR.y;
                     //axleInfo.Wheel.motorTorque = -10.0f;
                     //axleInfo.Wheel.motorTorque = (stickR.y+2.0f*stickR.x)*maxMotorTorque;
@@ -113,14 +112,6 @@ public class DriveWheelR : MonoBehaviour
                    
                     
                 axleInfo.Wheel.motorTorque = (y + 2.0f * x) * maxMotorTorque;
-                
-                /* Don't change this part */
-                   float MAXTORQUE = 5.0f;
-                   if (axleInfo.Wheel.motorTorque > MAXTORQUE)
-                      axleInfo.Wheel.motorTorque =MAXTORQUE;
-                    else if  (axleInfo.Wheel.motorTorque < -MAXTORQUE) 
-                      axleInfo.Wheel.motorTorque =-MAXTORQUE;  
-
             }
             ApplyLocalPositionToVisualsD(axleInfo.Wheel);
 

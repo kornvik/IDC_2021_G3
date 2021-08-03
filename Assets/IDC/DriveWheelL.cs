@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 
 [System.Serializable]
@@ -205,19 +206,12 @@ public class DriveWheelL : MonoBehaviour
                         }
                     }
                     
-                   axleInfo.Wheel.motorTorque = (y - 2.0f * x) * maxMotorTorque;
+                    
 
-                   /* Don't change this part */
-                   float MAXTORQUE = 5.0f;
-                   if (axleInfo.Wheel.motorTorque > MAXTORQUE)
-                      axleInfo.Wheel.motorTorque =MAXTORQUE;
-                    else if  (axleInfo.Wheel.motorTorque < -MAXTORQUE) 
-                      axleInfo.Wheel.motorTorque =-MAXTORQUE;  
-
-                
+                    axleInfo.Wheel.motorTorque = (y - 2.0f * x) * maxMotorTorque;
                 }
                 ApplyLocalPositionToVisualsD(axleInfo.Wheel);
-                Debug.Log(axleInfo.Wheel.motorTorque);
+
             }
         }
     }

@@ -47,19 +47,19 @@ public class Motor_prac : MonoBehaviour
         if (Input.GetButton("E"))
         {
             Debug.Log("Fire1");
-            motor.force = 0.06F;
+            motor.force = 5;
             motor.targetVelocity = 10;
         }
         else if (Input.GetButton("Q"))
         {
             Debug.Log("Fire2");
-            motor.force = 0.06F;
+            motor.force = 5;
             motor.targetVelocity = -10;
         }
         else
         {
             Debug.Log("Non"); 
-            motor.force = 0.06F;
+            motor.force = 5;
             motor.targetVelocity = 0;
         }
         motor.freeSpin = false;

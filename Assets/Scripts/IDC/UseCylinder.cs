@@ -33,7 +33,7 @@ public class UseCylinder : MonoBehaviour
                     cylinder.cfc = -5.0f;
             }
 
-            cylinder.CylinderOn();
+            // cylinder.CylinderOn();
         }
     }
 }
