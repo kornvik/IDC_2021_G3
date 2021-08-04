@@ -127,7 +127,8 @@ public class FlyThisThing : MonoBehaviour
         Vector3 predictedUp = Quaternion.AngleAxis(rb.angularVelocity.magnitude*Mathf.Rad2Deg*stability/speed,rb.angularVelocity)*transform.up;
         Vector3 torqueVector = Vector3.Cross(predictedUp,Vector3.up);
         rb.AddTorque(torqueVector * speed * speed);
+         Vector3 tn= new Vector3 (0, ty, 0);
         // rb.AddRelativeTorque(t);
-        // rb.AddTorque(t);
+        rb.AddTorque(tn);
     }
 }
