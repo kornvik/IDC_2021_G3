@@ -723,6 +723,7 @@ MonoBehaviour:
     steering: 1
   maxMotorTorque: 100
   power: 1
+  photonView: {fileID: 0}
 --- !u!1 &1122353365105892647
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +778,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 7302335430613687191}
-  sceneViewId: 2
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!54 &183331463194144092
@@ -977,6 +978,7 @@ MonoBehaviour:
     steering: 1
   maxMotorTorque: 100
   power: 1
+  photonView: {fileID: 0}
 --- !u!1 &1122353365405535545
 GameObject:
   m_ObjectHideFlags: 0

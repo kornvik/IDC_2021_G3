@@ -42,7 +42,7 @@ public class UseDCMotor : MonoBehaviour
                     tr = -10.0f;
             }
            
-        //    motor.tr = tr;
+           motor.tr = tr;
         //    motor.DCMotorOn();
             
         }  

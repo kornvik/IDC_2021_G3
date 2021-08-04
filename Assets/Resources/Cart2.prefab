@@ -1357,7 +1357,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1573713157200596710}
-  sceneViewId: 16
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &1573713157200596710
@@ -1710,7 +1710,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 2831253810216488926}
-  sceneViewId: 13
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!1 &3694462462688499674
@@ -1851,7 +1851,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 3606675978352621548}
-  sceneViewId: 15
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &3606675978352621548
@@ -2441,6 +2441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68991e9a47370f42bf26358deae84fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tr: 0
   photonView: {fileID: 3854073374351954615}
 --- !u!59 &2269581876439076964
 HingeJoint:
@@ -3451,7 +3452,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 744242833629515466}
-  sceneViewId: 14
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &1369288108762489595
@@ -3592,7 +3593,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1311931592852835932}
-  sceneViewId: 12
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!1 &8301920058061343240

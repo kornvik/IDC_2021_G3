@@ -7,7 +7,7 @@ public class atorque : MonoBehaviour
 {
     // Start is called before the first frame update
     Rigidbody rb;
-    private float tr;
+    public float tr;
 
     public PhotonView photonView;
     void Start()

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-
-public class FlyingCube : MonoBehaviour
+public class FlyThisThing : MonoBehaviour
 {
     // Start is called before the first frame update
+    
     private float tx, ty, tz, fx, fy, fz,dtx,dty,dtz;
     private Rigidbody rb;
-    public PhotonView photonView;
+    // public PhotonView photonView;
     // private PhotonView photonView;
     // [SerializeField]
     // [Range(0,20)]
@@ -25,7 +25,7 @@ public class FlyingCube : MonoBehaviour
     {
 
         rb=this.GetComponent<Rigidbody>();
-        photonView = this.GetComponent<PhotonView>();
+        // photonView = this.GetComponent<PhotonView>();
         targety = rb.position[1];
         targetx = rb.position[0];
         targetz = rb.position[2];
@@ -47,18 +47,18 @@ public class FlyingCube : MonoBehaviour
         ty=0.0f;
         tz=0.0f;
 
-        if (photonView.IsMine)
+        // if (photonView.IsMine)
         {
             if (Input.GetKey(KeyCode.A))
             {
                 Debug.Log("pressed A");
-                fx= 5.0f;
+                fx= 20.0f;
                 targetx += 1.0f;
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 Debug.Log("pressed D");
-                fx = -5.0f;
+                fx = -20.0f;
                 targetx -= 1.0f;
             }
             else 
@@ -66,19 +66,19 @@ public class FlyingCube : MonoBehaviour
             if (Input.GetKey(KeyCode.P))
             {
                 targety += 0.01F;
-                fy= 5.0f;
+                fy= 20.0f;
             }
             else if (Input.GetKey(KeyCode.L)&& targety>initialy)
             {
                 targety -= 0.01F;
-                fy = -5.0f;
+                fy = -20.0f;
             }
             else 
                 fy = -rb.velocity[1]*2.0F;
             if (Input.GetKey(KeyCode.S))
-                fz= 5.0f;
+                fz= 20.0f;
             else if (Input.GetKey(KeyCode.W))
-                fz = -5.0f;
+                fz = -20.0f;
             else
                 fz = -rb.velocity[2]*0.6F;
 
@@ -124,29 +124,4 @@ public class FlyingCube : MonoBehaviour
         //rb.AddRelativeTorque(t);
         rb.AddTorque(t);
     }
-    // void FixedUpdate()
-    // {
-        
-        
-        
-       
-        // Vector3 t= new Vector3 (tx, ty, tz);
-        //rb.AddRelativeTorque(t);
-        // rb.AddTorque(t);
-    //     error = targety-rb.position[1];
-    //     p = error;
-    //     i += (p)*(0.02F);
-    //     d = error-(prev_error)*0.02F;
-    //     prev_error = error;
-    //     fx=0.0f;
-    //     fz=0.0f;
-    //     fy = Kp*p+Ki*(i)+Kd*(d);
-    //     if(fy>20) fy = 20;
-    //     if(fy<-20) fy=-20;
-    //     Debug.Log(fy.ToString() + " " + p.ToString() + " " + i.ToString()+ " " + d.ToString());
-    //     Debug.Log("---------");
-    //     Vector3 f= new Vector3 (fx, fy, fz);
-    //     rb.AddForce(f);
-    // }
-
 }

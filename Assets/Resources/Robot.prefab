@@ -1389,6 +1389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cfc: 0
+  photonView: {fileID: 0}
 --- !u!65 &6526978401673691940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1627,6 +1628,7 @@ MonoBehaviour:
     steering: 1
   maxMotorTorque: 100
   power: 1
+  photonView: {fileID: 0}
 --- !u!1 &6526978401737235875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,7 +1896,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 3481283973877697293}
-  sceneViewId: 2
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!54 &6308497204261764550
@@ -2013,3 +2015,4 @@ MonoBehaviour:
     steering: 1
   maxMotorTorque: 100
   power: 1
+  photonView: {fileID: 0}
