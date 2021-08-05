@@ -2471,6 +2471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68991e9a47370f42bf26358deae84fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tr: 0
   photonView: {fileID: 3854073374351954615}
 --- !u!59 &2269581876439076964
 HingeJoint:

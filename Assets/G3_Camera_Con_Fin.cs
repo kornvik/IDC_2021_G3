@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-public class Camera_Con_Fin : MonoBehaviour
+public class G3_Camera_Con_Fin : MonoBehaviour
 {
     public GameObject cameraFamily;
     public GameObject body2;
@@ -18,10 +18,13 @@ public class Camera_Con_Fin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cameraFront.SetActive(true);
-        cameraRear.SetActive(false);
-        cameraRight.SetActive(false);
-        cameraLeft.SetActive(false);
+        if (photonView.IsMine)
+        {
+            cameraFront.SetActive(true);
+            cameraRear.SetActive(false);
+            cameraRight.SetActive(false);
+            cameraLeft.SetActive(false);
+        }
     }
 
     // Update is called once per frame
