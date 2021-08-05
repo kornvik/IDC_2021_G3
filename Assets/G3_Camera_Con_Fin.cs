@@ -24,6 +24,13 @@ public class G3_Camera_Con_Fin : MonoBehaviour
             cameraRear.SetActive(false);
             cameraRight.SetActive(false);
             cameraLeft.SetActive(false);
+            cameraLast.SetActive(false);
+        } else{
+            cameraFront.SetActive(false);
+            cameraRear.SetActive(false);
+            cameraRight.SetActive(false);
+            cameraLeft.SetActive(false);
+            cameraLast.SetActive(false);
         }
     }
 
