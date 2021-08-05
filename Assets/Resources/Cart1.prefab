@@ -839,10 +839,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DC Motor
       objectReference: {fileID: 0}
-    - target: {fileID: 2547129205845175468, guid: f477a3775e4ab7847b4b9b45f96a3722, type: 3}
-      propertyPath: sceneViewId
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2547129205845175470, guid: f477a3775e4ab7847b4b9b45f96a3722, type: 3}
       propertyPath: m_RootOrder
       value: 4

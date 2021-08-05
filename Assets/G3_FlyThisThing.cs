@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class FlyThisThing : MonoBehaviour
+public class G3_FlyThisThing : MonoBehaviour
 {
     // Start is called before the first frame update
     public PhotonView photonView;
@@ -64,40 +64,49 @@ public class FlyThisThing : MonoBehaviour
                 targetx -= 1.0f;
             }
             else 
-                fx = -rb.velocity[0]*2.0F;
+                fx = -rb.velocity[0]*10.0F;
+                if(fx > 100) fx=100f;
+                else if(fx < -100) fx=-100f;
             if (Input.GetKey(KeyCode.P))
             {
                 targety += 0.01F;
                 fy= 15.0f;
             }
-            else if (Input.GetKey(KeyCode.L)&& targety>initialy)
+            else if (Input.GetKey(KeyCode.L))
             {
                 targety -= 0.01F;
-                fy = -15.0f;
+                fy = -20.0f;
             }
             else 
-                fy = -rb.velocity[1]*2.0F;
+                fy = -rb.velocity[1]*10.0F;
+                if(fy > 100) fy=100f;
+                else if(fy < -100) fy=-100f;
             if (Input.GetKey(KeyCode.S))
                 fz= 20.0f;
             else if (Input.GetKey(KeyCode.W))
                 fz = -20.0f;
             else
-                fz = -rb.velocity[2]*2.0F;
+                fz = -rb.velocity[2]*10.0F;
+                if(fz > 100) fz=100f;
+                else if(fz < -100) fz=-100f;
 
             if (targety<initialy)
                 targety = initialy;
 
-            if (Input.GetKey(KeyCode.Q))
-                ty= 15.0f;
-            else if (Input.GetKey(KeyCode.E))
-                ty = -15.0f;
+            if (Input.GetKey(KeyCode.E))
+                ty= 5.0f;
+            else if (Input.GetKey(KeyCode.Q))
+                ty = -5.0f;
             else 
-                ty = -rb.angularVelocity[1]*1.0F;
+                ty = -rb.angularVelocity[1]*5.0F;
+                if(ty>20) ty=20f;
+                else if(ty<-20) ty=-20f;
+
         }
         
         //---------------------Hovering & Position Control ----------------------
         
-        Vector3 nf = new Vector3(0,3.5f * Mathf.Abs(Physics.gravity.y),0);
+        Vector3 nf = new Vector3(0,3.75f * Mathf.Abs(Physics.gravity.y),0);
         rb.AddForce(nf);
         Vector3 f= new Vector3 (fx, fy, fz);
 
@@ -126,9 +135,16 @@ public class FlyThisThing : MonoBehaviour
         
         Vector3 predictedUp = Quaternion.AngleAxis(rb.angularVelocity.magnitude*Mathf.Rad2Deg*stability/speed,rb.angularVelocity)*transform.up;
         Vector3 torqueVector = Vector3.Cross(predictedUp,Vector3.up);
-        rb.AddTorque(torqueVector * speed * speed);
-         Vector3 tn= new Vector3 (0, ty, 0);
-        // rb.AddRelativeTorque(t);
+        Vector3 realtorque = torqueVector * speed * speed;
+        if(realtorque.magnitude>20){
+            realtorque.Normalize();
+            realtorque = realtorque*20;
+        }
+        rb.AddTorque(realtorque);
+        Vector3 tn= new Vector3 (0, ty, 0);
+
+        Vector3 t_new = new Vector3(2.0f,0,0);
+        // rb.AddRelativeTorque(t_new);
         rb.AddTorque(tn);
     }
 }

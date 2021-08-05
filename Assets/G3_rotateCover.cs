@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class rotateCover : MonoBehaviour
+public class G3_rotateCover : MonoBehaviour
 {
     private HingeJoint hinge = null;
     public PhotonView photonView;
 
-    public float force = 0.06f;
+    public float force = 5.0f;
     // Start is called before the first frame update
       void Start()
     {
@@ -16,7 +16,7 @@ public class rotateCover : MonoBehaviour
         photonView = this.GetComponent<PhotonView>();
         // Make the hinge motor rotate with 90 degrees per second and a strong force.
         var motor = hinge.motor;
-        motor.force = 0.06f;
+        motor.force = 1.0f;
         motor.targetVelocity = 90;
         motor.freeSpin = false;
         hinge.motor = motor;

@@ -1929,6 +1929,36 @@ Transform:
   m_Father: {fileID: 2048362977291412577}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3896165940515864486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 960881465220772528}
+  m_Layer: 0
+  m_Name: TrackerAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &960881465220772528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896165940515864486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2048362977291412577}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3996846904740677705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,7 +2471,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68991e9a47370f42bf26358deae84fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tr: 0
   photonView: {fileID: 3854073374351954615}
 --- !u!59 &2269581876439076964
 HingeJoint:
@@ -3894,6 +3923,7 @@ Transform:
   - {fileID: 4679826087879806751}
   - {fileID: 8298838747446427690}
   - {fileID: 8091526296832722835}
+  - {fileID: 960881465220772528}
   m_Father: {fileID: 466325727211959900}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

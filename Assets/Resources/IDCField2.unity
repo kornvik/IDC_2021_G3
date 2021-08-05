@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -306,7 +306,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score_object: {fileID: 1493871943}
-  start: 0
 --- !u!4 &78599201
 Transform:
   m_ObjectHideFlags: 0
@@ -5948,10 +5947,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 540982418809484523, guid: 5236e3ab08e304547a19cd4cf7f0de55, type: 3}
-      propertyPath: sceneViewId
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5192976048037855624, guid: 5236e3ab08e304547a19cd4cf7f0de55, type: 3}
       propertyPath: m_Name
       value: Game Variant
@@ -6449,10 +6444,6 @@ PrefabInstance:
     - target: {fileID: 9022677323814377743, guid: cac13bfff7c409944ae85f85d12528c3, type: 3}
       propertyPath: m_Name
       value: Cube
-      objectReference: {fileID: 0}
-    - target: {fileID: 9022677323814377746, guid: cac13bfff7c409944ae85f85d12528c3, type: 3}
-      propertyPath: sceneViewId
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9022677323814377750, guid: cac13bfff7c409944ae85f85d12528c3, type: 3}
       propertyPath: m_RootOrder

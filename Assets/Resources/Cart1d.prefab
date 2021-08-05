@@ -45,7 +45,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &3125439734164341315
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!54 &6241877111199719684
 Rigidbody:
   m_ObjectHideFlags: 0

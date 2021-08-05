@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Motor_con_R : MonoBehaviour
 {
     // Start is called before the first frame update
     private HingeJoint hinge = null;
+    public PhotonView photonView;
     // private JointMotor jointmotor ;
-    public float force = 0.06f;
-    public float maxAng = 10f;
-    public float minAng = -90f;
+    private float force = 5.0f;
+    private float maxAng = 30f;
+    private float minAng = -60f;
+
+    private int isClose = 1;
     void Awake()
     {
         // controls.Player.CounterClock.performed += _ => CounterClock();
@@ -18,7 +22,7 @@ public class Motor_con_R : MonoBehaviour
     void Start()
     {
         hinge = GetComponent<HingeJoint>();
-
+        photonView = this.GetComponent<PhotonView>();
         // Make the hinge motor rotate with 90 degrees per second and a strong force.
         var motor = hinge.motor;
         var limit = hinge.limits;
@@ -42,26 +46,46 @@ public class Motor_con_R : MonoBehaviour
 
     void Update()
     {
-        var motor = hinge.motor;
-        if (Input.GetKey(KeyCode.R))
+        if (photonView.IsMine)
         {
-            Debug.Log("Close");
-            motor.force = force;
-            motor.targetVelocity = 40;
+            var motor = hinge.motor;
+            if (Input.GetKey(KeyCode.X))
+            {
+                Debug.Log("Close");
+                motor.force = force;
+                motor.targetVelocity = -40;
+            }
+            else if (Input.GetKey(KeyCode.Z))
+            {
+                Debug.Log("Open");
+                motor.force = force;
+                motor.targetVelocity = 40;
+            }
+            else if(Input.GetKey(KeyCode.C))
+            {
+                if(isClose==0) isClose = 1;
+                else if(isClose==1) isClose =2;
+                else isClose =1;
+            }
+            else
+            {
+                // Debug.Log("Non"); 
+                if(isClose==0){
+                    motor.force = force;
+                    motor.targetVelocity = 0;
+                } 
+                else if(isClose == 1){
+                    motor.force = force;
+                    motor.targetVelocity = 40;
+                }
+                else
+                {
+                    motor.force = force;
+                    motor.targetVelocity = -40;
+                }
+            }
+            motor.freeSpin = false;
+            hinge.motor = motor;
         }
-        else if (Input.GetKey(KeyCode.F))
-        {
-            Debug.Log("Open");
-            motor.force = force;
-            motor.targetVelocity = -40;
-        }
-        else
-        {
-            // Debug.Log("Non"); 
-            motor.force = force;
-            motor.targetVelocity = 0;
-        }
-        motor.freeSpin = false;
-        hinge.motor = motor;
     }
 }
