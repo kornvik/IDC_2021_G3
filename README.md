@@ -38,8 +38,8 @@ Placing the sky ball in the box
 
 Our team : 
   1. Tanpipat Kornvik (Leader, Software Lead)
-  2. Chung Gene
+  2. Chung Gene (Software)
   3. K. S. Sankardas (Mechanics Lead) 
-  4. Worrasak Yonglan
-  5. Yao Boxian
-  6. Caio Felipe dos Santos Oliverira
+  4. Worrasak Yonglan (Software)
+  5. Yao Boxian (Mechanics) 
+  6. Caio Felipe dos Santos Oliverira (Mechanics) 
