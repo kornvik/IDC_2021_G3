@@ -11,8 +11,10 @@ The rest is the history!
 
 For the design part, we embrace the idea of simple but efficient design.
 
-![image](https://user-images.githubusercontent.com/40062331/130056163-593d923d-d950-42c1-8bdd-abf0d69b3f8b.png)
-![image](https://user-images.githubusercontent.com/40062331/130056210-0dc0e46b-c2c3-47dc-a663-735b3f79caff.png)
+<img src="https://user-images.githubusercontent.com/40062331/130056163-593d923d-d950-42c1-8bdd-abf0d69b3f8b.png" alt="drawing" style="height:200px;"/>
+<img src="https://user-images.githubusercontent.com/40062331/130056210-0dc0e46b-c2c3-47dc-a663-735b3f79caff.png" alt="drawing" style="height:200px;"/>
+
+
 We can selectively drop the ball by spinning the red cover on the bottom of the robot(flying toilet).
 
 For the software part, we implement simple pid control to partially automate the robot.
@@ -20,6 +22,7 @@ To control robot
 w,a,s,d to move robot on ground plane. 
 p,l to move up and down.
 o,i for automove from starting point (i is faster version of o).
+r,t to rotate the cover.
 k to cancle the autopilot (turn off after getting the ball in the middel).
 1,2,3,4,5 for changing camera view. (recommend only 1 and 2).
 
