@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RobotnameR1: {fileID: 0}
   RobotnameB1: {fileID: 0}
+  RobotnameR2: {fileID: 0}
+  RobotnameB2: {fileID: 0}
 --- !u!114 &540982418809484520
 MonoBehaviour:
   m_ObjectHideFlags: 0
